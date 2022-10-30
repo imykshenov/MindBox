@@ -27,6 +27,5 @@ namespace Tests
             var c = new Circle(a);
             var square = c.Square;
         }
-
     }
 }

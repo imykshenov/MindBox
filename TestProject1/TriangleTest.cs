@@ -21,11 +21,11 @@ namespace Tests
             Assert.Catch<ArgumentException>(() => new Triangle(a, b, c));
         }
 
-        [TestCase(3, 4, 3)]
+        [TestCase(3, 4, 5)]
         public void GetSquare(double a, double b, double c)
         {
             var t = new Triangle(a, b, c);
-            var square = t.Square;
+            Assert.AreEqual(6, t.Square);
         }
 
         [TestCase(3, 4, 3, ExpectedResult = false)]
@@ -38,9 +38,9 @@ namespace Tests
 
             // Act.
             var isRight = triangle.IsTriangleRight();
-
             // Assert. 
             return isRight;
+
         }
     }
 }

@@ -1,39 +1,40 @@
-﻿namespace SquareMath.Figures
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Reflection;
+
+namespace SquareMath.Figures
 {
     public class Polygon : Figure
     {
 
+        public List<Vector> Points { get; set; }
+        public Polygon(params Vector[] points)
+        {
+            Points = points.ToList();
+            Square = GetSquare();
+
+            var a = "";
+        }
+
         /// <summary>
-        /// Квадрат
+        /// Формула площади Гаусса для n-угольных фигур(даже треугольник)
         /// </summary>
-        /// <param name="a">Длинна стороны</param>
-        public Polygon(double a)
+        private double GetSquare()
         {
+            double area = 0;
+            for (int i = 0; i < Points.Count; i++)
+            {
+                int j = (i + 1) % Points.Count;
+                var a = Points[i];
+                var b = Points[j];
 
-        }
-        
-        public Polygon(double a, double b)
-        {
-
-        }
-
-        public Polygon(double a, double b, double c)
-        {
-
+                area += a.X * b.Y - a.Y * b.X;
+            }
+            return Math.Abs(area) / 2;
         }
 
-        public Polygon(double a, double b, double c, double d)
-        {
-
-        }
-
-        public Polygon(double a, double b, double c, double d, double e)
-        {
-
-        }
-
-        //один параметр входной - квадрат
-        //два квадрат или прямоугольник
-        //5, 6, 7 и тд
     }
+
 }
