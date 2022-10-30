@@ -15,10 +15,10 @@ namespace Tests
         {
             var polygon = new Polygon(
                 new Vector(0, 0),
-                new Vector(4, 0),
-                new Vector(0, 5));
+                new Vector(0, 4),
+                new Vector(3, 0));
 
-            Assert.AreEqual(10, polygon.Square);
+            Assert.AreEqual(6, polygon.Square);
         }
 
 
