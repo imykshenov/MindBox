@@ -8,7 +8,6 @@ namespace SquareMath.Figures
 {
     public class Polygon : Figure
     {
-
         public List<Vector> Points { get; set; }
         public Polygon(params Vector[] points)
         {
