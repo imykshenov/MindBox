@@ -1,13 +1,17 @@
 ﻿namespace SquareMath.Figures
 {
-    public class Polygon
+    public class Polygon : Figure
     {
-        public const double Accuracy = 1e6;
+
+        /// <summary>
+        /// Квадрат
+        /// </summary>
+        /// <param name="a">Длинна стороны</param>
         public Polygon(double a)
         {
 
         }
-
+        
         public Polygon(double a, double b)
         {
 

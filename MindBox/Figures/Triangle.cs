@@ -2,14 +2,12 @@
 
 namespace SquareMath.Figures
 {
-    public class Triangle
+    public class Triangle : Figure
     {
-        public const double Accuracy = 1e6;
-        public double SideA { get; }
-        public double SideB { get; }
-        public double SideC { get; }
+        private double SideA { get; }
+        private double SideB { get; }
+        private double SideC { get; }
 
-        private bool _isTriangleRight { get; set; }
 
         public Triangle(double a, double b, double c)
         {
@@ -18,15 +16,15 @@ namespace SquareMath.Figures
                 SideA = a;
                 SideB = b;
                 SideC = c;
-                _isTriangleRight = IsTriangleRight();
+                Square = GetSquare();
             }
             else
             {
-                throw new ArgumentException("Наибольшая сторона должна быть меньше суммы двух других сторон");
+                throw new ArgumentException("Наибольшая сторона должна быть меньше суммы двух других сторон", nameof(Triangle));
             }
         }
 
-        public bool TriangleCheck(double a, double b, double c)
+        private bool TriangleCheck(double a, double b, double c)
         {
             return (a < b + c) && (b < a + c) &&(c < b + a);
         }

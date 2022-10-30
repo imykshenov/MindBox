@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SquareMath
+namespace Tests
 {
-    public class Square
+    public class PolygonsTest
     {
 
     }

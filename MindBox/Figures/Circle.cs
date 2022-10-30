@@ -2,22 +2,24 @@
 
 namespace SquareMath.Figures
 {
-    public class Circle
+    public class Circle : Figure
     {
-        public const double Accuracy = 1e6;
-        public double Radius { get; }
+        private double Radius { get; }
 
         public Circle(double radius)
         {
-            if(radius > Accuracy)
+            if (radius > Accuracy)
+            {
                 Radius = radius;
+                Square = GetSquare();
+            }
             else
             {
-                throw new ArgumentException("Неверно указан раудиус окружности");
+                throw new ArgumentException("Неверно указан раудиус окружности", nameof(Circle));
             }
         }
 
-        public double GetSquare()
+        private double GetSquare()
         {
             return Math.PI * Math.Pow(Radius, 2d);
         }
