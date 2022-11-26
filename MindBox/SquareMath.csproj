@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Figures\Circle.cs" />
     <Compile Include="Figures\Figure.cs" />
+    <Compile Include="Figures\IFigure.cs" />
     <Compile Include="Figures\Points.cs" />
     <Compile Include="Figures\Polygon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

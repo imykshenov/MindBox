@@ -25,7 +25,7 @@ namespace Tests
         public void GetSquare(double a, double b, double c)
         {
             var t = new Triangle(a, b, c);
-            Assert.AreEqual(6, t.Square);
+            Assert.AreEqual(6, t.GetSquare());
         }
 
         [TestCase(3, 4, 3, ExpectedResult = false)]

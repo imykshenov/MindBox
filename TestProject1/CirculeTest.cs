@@ -25,7 +25,7 @@ namespace Tests
         public void GetSquare(double a)
         {
             var c = new Circle(a);
-            var square = c.Square;
+            var square = c.GetSquare();
         }
     }
 }

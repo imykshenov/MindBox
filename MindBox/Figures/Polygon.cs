@@ -6,21 +6,18 @@ using System.Reflection;
 
 namespace SquareMath.Figures
 {
-    public class Polygon : Figure
+    public class Polygon : IFigure
     {
         public List<Vector> Points { get; set; }
         public Polygon(params Vector[] points)
         {
             Points = points.ToList();
-            Square = GetSquare();
-
-            var a = "";
         }
 
         /// <summary>
         /// Формула площади Гаусса для n-угольных фигур(даже треугольник)
         /// </summary>
-        private double GetSquare()
+        public double GetSquare()
         {
             double area = 0;
             for (int i = 0; i < Points.Count; i++)

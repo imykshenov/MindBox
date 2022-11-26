@@ -18,7 +18,7 @@ namespace Tests
                 new Vector(0, 4),
                 new Vector(3, 0));
 
-            Assert.AreEqual(6, polygon.Square);
+            Assert.AreEqual(6, polygon.GetSquare());
         }
 
 
@@ -31,7 +31,7 @@ namespace Tests
                 new Vector(4, 4),
                 new Vector(0, 4));
 
-            Assert.AreEqual(16, polygon.Square);
+            Assert.AreEqual(16, polygon.GetSquare());
         }
 
 
@@ -45,7 +45,7 @@ namespace Tests
                 new Vector(2, 3),
                 new Vector(0, 4));
 
-            Assert.AreEqual(14, polygon.Square);
+            Assert.AreEqual(14, polygon.GetSquare());
         }
 
         [Test]
@@ -59,7 +59,7 @@ namespace Tests
                 new Vector(2, 3),
                 new Vector(0, 4));
 
-            Assert.AreEqual(10, polygon.Square);
+            Assert.AreEqual(10, polygon.GetSquare());
         }
 
     }

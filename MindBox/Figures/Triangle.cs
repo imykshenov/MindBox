@@ -2,7 +2,7 @@
 
 namespace SquareMath.Figures
 {
-    public class Triangle : Figure
+    public class Triangle : Figure, IFigure
     {
         private double SideA { get; }
         private double SideB { get; }
@@ -16,7 +16,6 @@ namespace SquareMath.Figures
                 SideA = a;
                 SideB = b;
                 SideC = c;
-                Square = GetSquare();
             }
             else
             {

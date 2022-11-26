@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SquareMath.Figures
 {
-    public abstract class Figure
+    public interface IFigure
     {
-        public const double Accuracy = 1e-6;
+        double GetSquare();
     }
 }

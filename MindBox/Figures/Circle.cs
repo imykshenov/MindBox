@@ -2,16 +2,14 @@
 
 namespace SquareMath.Figures
 {
-    public class Circle : Figure
+    public class Circle : Figure , IFigure
     {
-        private double Radius { get; }
-
+        public double Radius { get; }
         public Circle(double radius)
         {
             if (radius > Accuracy)
             {
                 Radius = radius;
-                Square = GetSquare();
             }
             else
             {
@@ -19,10 +17,9 @@ namespace SquareMath.Figures
             }
         }
 
-        private double GetSquare()
+        public double GetSquare()
         {
             return Math.PI * Math.Pow(Radius, 2d);
         }
-
     }
 }
